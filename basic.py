@@ -57,3 +57,12 @@ def lumberjack(name, pronoun):
 		print("{}'s a lumberjack and {} okay!".format(name, pronoun))
 
 lumberjack("Angelica", "she's")
+
+# exceptions in python
+
+try:
+	count = int(input("Give me a number:"))
+except ValueError:
+	print("That's not a number!")
+else:
+	print("Hi " * count)
