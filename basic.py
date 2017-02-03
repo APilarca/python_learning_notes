@@ -17,3 +17,26 @@ else:
 
 if today not in days_open:
 	print("Sorry we're closed")
+
+# for and while loops
+
+my_list = ['hello', 'how', 'are', 'you']
+
+for word in my_list:
+	print(word.upper())
+
+for num in [1, 2, 3, 4]:
+	if num % 2 == 0:
+		print(num)
+
+start = 10
+while start:
+	print(start)
+	start -= 1
+
+names = ['Angelica', 'Geezer', 'QUIT', 'Kug']
+
+for name in names:
+	if name == 'QUIT':
+		break
+	print(name)
