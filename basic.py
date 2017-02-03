@@ -48,3 +48,12 @@ print(age + 1)
 
 # writing functions
 
+def hows_the_parrot():
+	print("He's pining for the fjords!")
+
+hows_the_parrot()
+
+def lumberjack(name, pronoun):
+		print("{}'s a lumberjack and {} okay!".format(name, pronoun))
+
+lumberjack("Angelica", "she's")
