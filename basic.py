@@ -40,3 +40,11 @@ for name in names:
 	if name == 'QUIT':
 		break
 	print(name)
+
+# using input
+
+age =  int(input("What's your age? "))
+print(age + 1)
+
+# writing functions
+
