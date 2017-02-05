@@ -9,7 +9,9 @@ while True:
 	if guess == secret_num:
 		print("You got it! My number was {}".format(secret_num))
 		break
+	elif guess > secret_num:
+		print("Sorry too hi!")
 	else:
-		print("Sorry guess again :( ")
+		print("Try lower!")
 # print hit/miss
 
