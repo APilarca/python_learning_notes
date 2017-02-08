@@ -5,9 +5,6 @@ def game():
 	secret_num = random.randint(1, 10)
 	guesses = []
 
-	def add_guess(guessed):
-		guesses.append(guessed)
-	# get guess
 	while len(guesses) < 5:
 		try:
 			guess = int(input("Guess a number between 1 and 10: "))
@@ -19,10 +16,16 @@ def game():
 				break
 			elif guess > secret_num:
 				print("Sorry too hi!")
-				add_guess(guess)
 			else:
 				print("Too low!")
-				add_guess(guess)
-		# print hit/miss
+		guesses.append(guess)
+
+	else:
+		print("You didn't get it! My number was {}".format(secret_num))
+	play_again = raw_input("Would you like to play again? (Y/n)  ")
+	if play_again.lower() != 'n':
+		game()
+	else:
+		print("Thanks for playing!")
 
 game()
