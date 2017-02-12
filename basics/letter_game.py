@@ -40,7 +40,7 @@ while True:
 		elif guess in bad_guesses or guess in good_guesses:
 			print("You've already guessed that letter!")
 			continue
-		elif not guess.isa lpha():
+		elif not guess.isalpha():
 			print("You can only guess letters!")
 			continue
 
