@@ -15,15 +15,32 @@ Enter 'SHOW' to see your current list.
 """)
 
 def add_to_list(new_item):
-	shopping_list.append(new_item)
-	print("Added! List has {} items".format(len(shopping_list)))
+	show_list()
+	if len(shopping_list):
+		position = raw_input("where should I add {}?\n"
+			"Press ENTER to add to the end of the list\n"
+			"> ".format(new_item))
+	else:
+		position = 0
+	try:
+		position = abs(int(position))
+	except ValueError:
+		position = None
+	if position is not None:
+		shopping_list.insert(position - 1, new_item)
+	else:
+		shopping_list.append(new_item)
 	show_list()
 
 def show_list():
 	clear_screen()
 	print("Here's your list: ")
+
+	index = 1
 	for item in shopping_list:
-		print(item)
+		print("{}. {}".format(index, item))
+		index += 1
+		print("-" * 10)
 
 show_help()
 
